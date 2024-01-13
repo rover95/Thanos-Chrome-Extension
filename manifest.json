@@ -6,9 +6,9 @@
     "action": {
       "default_popup": "popup.html",
       "default_icon": {
-        "16": "images/hawkeye.png",
-            "48": "images/hawkeye.png",
-            "128": "images/hawkeye.png"
+        "16": "images/Thanos.png",
+            "48": "images/Thanos.png",
+            "128": "images/Thanos.png"
       }
     },
     "background": {
@@ -21,9 +21,9 @@
       }
     ],
     "icons": {
-        "16": "images/hawkeye_.png",
-        "48": "images/hawkeye_.png",
-        "128": "images/hawkeye_.png"
+        "16": "images/Thanos.png",
+        "48": "images/Thanos.png",
+        "128": "images/Thanos.png"
     }
 }
   

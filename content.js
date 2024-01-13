@@ -1,30 +1,3 @@
-function randomDeleteHalfOfTextInNodes() {
-  // 获取所有文本节点
-  const textNodes = [];
-  (function getTextNodes(node) {
-    if (node.nodeType === Node.TEXT_NODE && node.nodeValue.trim() !== '') {
-      textNodes.push(node);
-    } else {
-      node.childNodes.forEach(getTextNodes);
-    }
-  })(document.body);
-
-  // 对每个文本节点随机删除一半的字符
-  textNodes.forEach(node => {
-    const text = node.nodeValue;
-    let newText = '';
-    for (let char of text) {
-      // 随机决定是否删除字符
-      if (Math.random() < 0.5) {
-        newText += char;
-      } 
-    }
-    // 更新文本节点的内容
-    node.nodeValue = newText;
-  });
-}
-
-
 function collectLeafNodes(node, leafNodes) {
   if (node.nodeType === Node.ELEMENT_NODE && node.childNodes.length === 0) {
     // 当前节点是一个没有子节点的元素节点，即叶子节点
@@ -67,17 +40,10 @@ function randomDeleteFromLeaves() {
   });
 }
 
-// 调用函数开始处理
-// randomDeleteFromLeaves();
-
-
-
-
 
 chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse) {
     if (request.action === "deleteHalfDOM") {
-      // randomDeleteHalfOfTextInNodes();
 			randomDeleteFromLeaves();
     }
   }
