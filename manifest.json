@@ -1,0 +1,29 @@
+{
+    "manifest_version": 3,
+    "name": "ThanosExtension",
+    "version": "1.0",
+    "permissions": ["activeTab"],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "images/hawkeye.png",
+            "48": "images/hawkeye.png",
+            "128": "images/hawkeye.png"
+      }
+    },
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ],
+    "icons": {
+        "16": "images/hawkeye_.png",
+        "48": "images/hawkeye_.png",
+        "128": "images/hawkeye_.png"
+    }
+}
+  
